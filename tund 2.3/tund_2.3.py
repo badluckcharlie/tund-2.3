@@ -3,8 +3,8 @@ print("Tere! Olen sinu uus sõber - Python!")
 nimi = input("Palun sisesta oma nimi: ")
 print(f"{nimi}, oi kui ilus nimi!")
 
-valik = input(f"{nimi}! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
-if valik == "1":
+valik = input(f"{nimi}! Kas leian Sinu keha indeksi? EI või JAH => ")
+if valik == "JAH":
     try:
         pikkus = int(input("Palun sisesta oma pikkus sentimeetrites: "))
         if pikkus <= 0:
@@ -30,7 +30,7 @@ if valik == "1":
             hinnang = "Tervisele ohtlik rasvumine"
         print(hinnang)
     except ValueError as e:
-        print(f"Vigane sisestus: {e}")
+        print(f"Viga: {e}")
 else:
     print("Kahju! See on väga kasulik info!")
 
